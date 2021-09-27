@@ -6,7 +6,8 @@
  * @flow strict-local
  */
 
-import React, {Fragment,Component } from 'react';
+import React, {Fragment,Component,useEffect } from 'react';
+import SplashScreen from 'react-native-splash-screen';
 import {
   StyleSheet,
   View,
@@ -14,17 +15,18 @@ import {
 } from 'react-native';
 
 
-class App extends Component{
+const App = () =>{
 
-  render()
-  {
+    useEffect(()=>{
+      SplashScreen.hide();
+    },[]);
+
     return (
       <View>
+        <Image source={require('./android/app/src/main/res/drawable/image.png')}/>
       </View>
     );
-  }
-}
-;
+};
 
 
 const styles = StyleSheet.create({
