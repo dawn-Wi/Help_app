@@ -6,24 +6,25 @@
  * @flow strict-local
  */
 
-import React, { Fragment,Component } from 'react';
-import type {Node} from 'react';
+import React, {Fragment,Component } from 'react';
 import {
   StyleSheet,
   View,
-  
+  Image,
 } from 'react-native';
 
 
 class App extends Component{
-  render(){
-    return(
-      <View>
 
+  render()
+  {
+    return (
+      <View>
       </View>
     );
   }
-};
+}
+;
 
 
 const styles = StyleSheet.create({
