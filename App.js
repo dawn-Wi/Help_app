@@ -64,10 +64,57 @@ function HomeScreen({ navigation }) {
   );
 }
 
-function 패스트푸드Screen() {
+function 패스트푸드Screen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>패스트푸드 Screen</Text>
+    <View style={styles.container}>
+      <View style={styles.header}/>
+      <View style={styles.container}>
+      <View style={styles.elem}>
+      <Button
+          title="맥도날드"
+          onPress={() => navigation.navigate('맥도날드')}
+        />
+        <View style={styles.content}/>
+        <Button
+          title="롯데리아"
+          onPress={() => navigation.navigate('카페')}
+        />
+        <View style={styles.content}/>
+        <Button
+          title="도미노피자"
+          onPress={() => navigation.navigate('음식점')}
+        />
+        <View style={styles.content}/>
+        <Button
+          title="버거킹"
+          onPress={() => navigation.navigate('은행')}
+        />
+        <View style={styles.content}/>
+        <Button
+          title="맘스터치"
+          onPress={() => navigation.navigate('편의점')}
+        />
+        <View style={styles.content}/>
+        <Button
+          title="KFC"
+          onPress={() => navigation.navigate('편의점')}
+        />
+      </View>
+      </View>
+        
+        <View style={styles.footer}>
+        <View style={styles.container2}>
+        <Button
+          title="사용법 알아보기"
+          onPress={() => navigation.navigate('사용법알아보기')}
+        />
+        <View style={styles.content2}/>
+        <Button
+          title="모의사용"
+          onPress={() => navigation.navigate('모의사용')}
+        />
+        </View>
+        </View>
     </View>
   );
 }
@@ -116,6 +163,15 @@ function 모의사용Screen() {
   );
 }
 
+function 맥도날드Screen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>맥도날드 Screen</Text>
+    </View>
+  );
+}
+
+
 const Stack = createStackNavigator();
 
 const App = () =>{
@@ -134,7 +190,10 @@ const App = () =>{
         <Stack.Screen name="편의점" component={편의점Screen} />
         <Stack.Screen name="사용법알아보기" component={사용법알아보기Screen} />
         <Stack.Screen name="모의사용" component={모의사용Screen} />
+
+        <Stack.Screen name="맥도날드" component={맥도날드Screen} />
       </Stack.Navigator>
+      
       </NavigationContainer>
     );
 };
