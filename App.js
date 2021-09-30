@@ -8,7 +8,7 @@
 
 import React, {Fragment,Component,useEffect } from 'react';
 import SplashScreen from 'react-native-splash-screen';
-import {StyleSheet,Text,View,Image,Button,} from 'react-native';
+import {StyleSheet,Text,View,Image,Button, PushNotificationIOS,} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
@@ -165,8 +165,14 @@ function 모의사용Screen() {
 
 function 맥도날드Screen() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>맥도날드 Screen</Text>
+    <View>
+      <View style = {styles.container}>
+      <Image source={require('./photo.png')} resizeMode='contain' style={{width:410, height:500,alignItems:'center',justifyContent:'center', flexDirection:'row',paddingTop:10}}></Image>
+      <View style={styles.footer}>
+      <Text>              1. 화면을 터치하세요.</Text>
+      </View>
+      </View>
+      
     </View>
   );
 }
@@ -207,6 +213,9 @@ const styles = StyleSheet.create({
   },
   footer:{
     height:60,
+  },
+  lefter:{
+    width:10,
   },
   content:{
     paddingBottom: 30,
